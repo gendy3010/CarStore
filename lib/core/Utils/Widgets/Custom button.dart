@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Custombutton extends StatelessWidget {
-  Custombutton({super.key,required this.title});
+  Custombutton({super.key,required this.title,this.tab});
   String title;
+  VoidCallback? tab;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        onPressed: () async {
-        },
+        onPressed: tab,
         style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
 

@@ -3,6 +3,8 @@ import 'package:carz/core/Utils/Widgets/Custom%20button.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/Styles/styles.dart';
+import '../../../Featured Home/presentation/views/HomeScreen.dart';
+import 'Signup view.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -46,9 +48,13 @@ class LoginView extends StatelessWidget {
               SizedBox(
                 height: 20,),
               Custombutton(
-                  title: 'Login'),
-              SizedBox(
-                height: 30,),
+                  title: 'Login',
+                tab: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context)=> HomeScreen()));
+                },
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -57,7 +63,7 @@ class LoginView extends StatelessWidget {
                   TextButton(
                     onPressed: (){
                       Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context)=> Container()));
+                          MaterialPageRoute(builder: (context)=> SignUpView()));
 
                     },
                     child:   Text('Sign Up',

@@ -14,6 +14,12 @@ abstract class Style {
     fontWeight: FontWeight.bold,
     fontFamily: 'PoppinsRegular',
   );
+  static const textStyle22 = TextStyle(
+    color: Color(0xFFFF5C00),
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'PoppinsBold',
+  );
   static const textStyle14 = TextStyle(
     color: Colors.black,
     fontSize: 14,
