@@ -1,5 +1,4 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 abstract class Style {
@@ -25,8 +24,11 @@ abstract class Style {
     fontSize: 14,
     fontFamily: 'PoppinsRegular',
   );
-
-
+  static const textStyle18 = TextStyle(
+    color: Colors.white,
+    fontSize: 18,
+    fontFamily: 'PoppinsRegular',
+  );
   static const textStyle16 = TextStyle(
     color: Colors.white,
     fontSize: 16,
@@ -34,6 +36,25 @@ abstract class Style {
   );
 
 
+  static const  titleStyle = TextStyle(
+    fontFamily: 'PoppinsRegular',
+
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: Colors.black87,
+  );
+
+  static const  priceStyle = TextStyle(
+    fontSize: 14,
+    color: Colors.grey,
+    fontFamily: 'PoppinsRegular',
+  );
+
+  static const  descriptionStyle = TextStyle(
+    fontFamily: 'PoppinsRegular',
+    fontSize: 14,
+    color: Colors.grey,
+  );
 
 
 }

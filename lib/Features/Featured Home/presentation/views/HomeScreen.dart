@@ -1,10 +1,12 @@
+import 'package:carz/Features/Featured%20Home/presentation/views/FilterBottomSheet.dart';
+import 'package:flutter/material.dart';
 import 'package:carz/Features/Featured%20Home/presentation/views/widgets/Featured%20Cars%20Listview.dart';
 import 'package:carz/Features/Featured%20Home/presentation/views/widgets/NavBar.dart';
 import 'package:carz/Features/Featured%20Home/presentation/views/widgets/Recomended%20Gridview.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import '../../../../core/Styles/styles.dart';
 import '../../../../core/Utils/Widgets/Custom TextField.dart';
+import 'package:flutter/cupertino.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,7 +15,7 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with FilterBottomSheet {
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
@@ -65,7 +67,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            Image.asset('assets/images/filter.png'),
+                            GestureDetector(
+                              onTap: () {
+                                showFilterSheet(context); // استدعاء البوتوم شيت عند الضغط على الفلتر
+                              },
+                              child: Image.asset('assets/images/filter.png'),
+                            ),
                           ],
                         ),
                         FeaturedCarsListView(),
@@ -92,8 +99,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-
-
             Positioned(
               bottom: 25,
               left: 30,
