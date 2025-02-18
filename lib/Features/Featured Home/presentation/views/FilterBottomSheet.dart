@@ -53,9 +53,9 @@ mixin FilterBottomSheet {
                   SizedBox(height: 20),
                   Row(
                     children: [
-                      Expanded(child: _buildDropdown("Model")),
+                      Expanded(child: buildDropdown("Model")),
                       SizedBox(width: 10),
-                      Expanded(child: _buildDropdown("Brand")),
+                      Expanded(child: buildDropdown("Brand")),
                     ],
                   ),
                   SizedBox(height: 15),
@@ -107,7 +107,7 @@ mixin FilterBottomSheet {
     );
   }
 
-  Widget _buildDropdown(String hint) {
+  Widget buildDropdown(String hint) {
     return DropdownButtonFormField<String>(
       decoration: InputDecoration(
         filled: true,
